@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap')
+
+body
+    background: #00000b
+    font-family: 'Roboto', sans-serif;
+
+nav
+    position: fixed
+    // background: #181842
+    width: 100%
+    font-family: 'VT323', monospace;
+    height: 100px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .5s
+    z-index: 1
+    &.minimize
+        opacity: 0
+        height: 50px
+    ul
+        margin: 0
+        padding: 0
+        max-width: 1200px
+        margin: 0 auto
+        text-align: center
+        list-style: none
+        li
+            display: inline-block
+            a
+                color: #fff
+                margin: 0px 25px
+                text-decoration: none
+                font-size: 28px
+                position: relative
+                @media (max-width: 768px)
+                    display: block
+                    margin: 0 5px
+                    font-size: 16px
+                    color: #000
+                &:hover
+                    &:after
+                        content: ''
+                        position: absolute
+                        bottom: -10px
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 50%
+                        height: 3px
+                        background: #d6ff99
+    @media (max-width: 768px)
+        background: #d6ff99
+        height: 50px
+        
+.hero-video-wrapper
+    pointer-events: none;
+    position: relative
+    video
+        width: 100%
+        height: auto
+        @media (max-width: 768px)
+            display: none
+    svg
+        position: absolute
+        bottom: -10%
+        left: 0
+    img
+        @media (min-width: 768px)
+            display: none
+
+.story
+    display: flex
+    align-items: center
+    padding-top: 120px
+    @media (max-width: 768px)
+        padding-top: 20px
+        flex-direction: column
+        text-align: center
+    .story-video
+        max-width: 60%
+        position: relative
+        @media (max-width: 768px)
+            max-width: 100%
+            order: 1
+        video
+            width: 100%
+            height: auto
+            @media (max-width: 768px)
+                display: none
+        svg
+            position: absolute
+            bottom: 0
+            left: 0
+        img
+            width: 100%
+            @media (min-width: 768px)
+                display: none
+    .copy
+        display: flex
+        flex: 1
+        justify-content: center
+        .copy-inner
+            max-width: 500px
+            margin: 25px
+            h1
+                color: #d6ff99
+                font-size: 75px
+                margin-bottom: 15px
+                font-family: 'VT323', monospace;
+            p
+                color: #f1f1f1
+                font-size: 28px
+                margin: 15px 0 0
+            a
+                color: #333
+                text-decoration: none
+                margin-top: 25px
+                padding: 10px 15px
+                display: inline-block
+                font-size: 22px
+                background: #d6ff99
+                font-family: 'VT323', monospace;
+                position: relative
+                &:hover
+                    background: #333
+                    color: #fff
+                &:before
+                    content: " "
+                    position: absolute
+                    top: -.25em
+                    left: -.25em
+                    width: .625em
+                    height: .625em
+                    background: #1b1b1b
+                    border-bottom: solid .25em #000
+                    border-right: solid .25em #000
+                &:after
+                    content: " "
+                    position: absolute
+                    bottom: -.25em
+                    right: -.25em
+                    width: .625em
+                    height: .625em;
+                    background: #1b1b1b
+                    border-top: solid .25em #000
+                    border-left: solid .25em #000
+                @media (max-width: 768px)
+                    order: 0
+    
+
+.alien-cards
+    background: rgb(26,26,78);
+    background: linear-gradient(0deg, rgba(26,26,78,1) 57%, rgba(0,0,0,1) 100%);
+    margin: 50px 0 0
+    padding: 50px 15px
+    text-align: center
+    &-wrapper
+        max-width: 1200px
+        margin: 50px auto 0
+        display: flex
+        flex-wrap: wrap
+        img
+            width: 25%
+            padding: 10px
+            border-radius: 25px
+    a
+        font-size: 32px
+        padding: 35px 0
+        text-decoration: none;
+        color: #fff
+        display: inline-block
+        font-family: 'VT323', monospace;
+        &:hover
+            color: #d6ff99
+    @media (max-width: 768px)
+        padding: 0 15px
+                        
